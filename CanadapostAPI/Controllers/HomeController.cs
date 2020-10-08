@@ -15,7 +15,7 @@ namespace CanadapostAPI.Controllers
         {
             CanadapostAPIService service = new CanadapostAPIService();
             var mailedBy = "4008838";
-            var response = service.getRate(mailedBy);
+            var response = service.GetRate(mailedBy);
             return View(response);
         }
 
