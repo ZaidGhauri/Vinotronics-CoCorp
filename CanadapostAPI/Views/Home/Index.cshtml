@@ -1,0 +1,26 @@
+﻿@model pricequotes
+@{
+    ViewData["Title"] = "Assignment 2: Canada Post API";
+}
+
+<div class="row">
+    <div style="overflow-x:auto;">
+        <table class="content-table">
+            <tbody>
+                <tr>
+                    <th>Service Type</th>
+                    <th>Transit Day</th>
+                    <th>Regular Price</th>
+                </tr>
+                @foreach (var item in @Model.pricequote)
+                {
+                    <tr>
+                        <td>@item.servicename</td>
+                        <td>@item.servicestandard.expectedtransittime</td>
+                        <td>@item.pricedetails.due</td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+</div>
